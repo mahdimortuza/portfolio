@@ -1,7 +1,11 @@
+import Footer from "./components/Footer";
+import Navigation from "./components/Navigation";
+
 const Home = () => {
   return (
     <div>
-      <h1>Hello world!</h1>
+      <Navigation />
+      <Footer />
     </div>
   );
 };

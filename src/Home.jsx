@@ -1,10 +1,12 @@
 import Footer from "./components/Footer";
-import Navigation from "./components/Navigation";
+import Hero from "./components/Hero";
+import StickyNavbar from "./components/Navigation";
 
 const Home = () => {
   return (
     <div>
-      <Navigation />
+      <StickyNavbar />
+      <Hero />
       <Footer />
     </div>
   );

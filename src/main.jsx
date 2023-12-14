@@ -7,7 +7,9 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
-      <Home />
+      <div className=" bg-[#FEFAF6]">
+        <Home />
+      </div>
     </ThemeProvider>
   </React.StrictMode>
 );

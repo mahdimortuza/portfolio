@@ -18,6 +18,7 @@ module.exports = withMT({
     extend: {
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],
+        playfair: ['Playfair Display', 'serif'],
       },
     },
   },

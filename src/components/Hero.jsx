@@ -6,7 +6,7 @@ import img from "../assets/image/mahdi.png";
 
 const Hero = () => {
   return (
-    <div className="relative px-4 lg:px-8 bg-[#FEFAF6] max-w-[1350px] mx-auto pb-16">
+    <div className="relative px-4 lg:px-8 bg-[#FEFAF6] max-w-[1350px] mx-auto pb-[37px] md:pb-16">
       <img className="absolute top-0 right-0" src={bgObject}></img>
 
       <div className=" flex flex-col md:flex-row md:items-end md:justify-between pt-10 md:pt-5">

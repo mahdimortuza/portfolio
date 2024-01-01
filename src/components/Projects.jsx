@@ -22,12 +22,12 @@ const Projects = () => {
   ];
 
   return (
-    <div className="max-w-[1350px] mx-auto relative pb-[90px]">
+    <div className="max-w-[1350px] mx-auto relative pb-[90px] px-4 lg:px-8">
       <img
-        className="absolute  md:top-0 -right-16 md:right-0 -mt-80 md:-mt-96"
+        className="absolute  md:top-0 -right-0 md:right-0 -mt-80 md:-mt-96"
         src={objBlue}
       />
-      <h2 className="font-playfair text-[64px] text-center leading-[66px] mt-[100px]">
+      <h2 className="font-playfair text-[38px] md:text-[64px] text-left md:text-center leading-[40px] md:leading-[66px] mt-[100px]">
         Some of my recent <br /> projects
       </h2>
       <img className="absolute top-0 left-0" src={sliderObj} />
@@ -37,14 +37,18 @@ const Projects = () => {
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper mt-8"
+        className="mySwiper mt-8 w-[270px] h-[368px] md:w-[426px] md:h-[573px]"
       >
         {sliderElements.map((sliderElement) => (
           <div key={sliderElement.header}>
             <SwiperSlide>
-              <div>
-                <h3>{sliderElement.header}</h3>
-                <p>{sliderElement.des}</p>
+              <div className="">
+                <h3 className="px-4 font-playfair text-[32px] md:text-[36px] font-bold">
+                  {sliderElement.header}
+                </h3>
+                <p className="px-4 text-[#556070] font-raleway text-[20px] md:text-[22px] font-medium">
+                  {sliderElement.des}
+                </p>
               </div>
             </SwiperSlide>
           </div>

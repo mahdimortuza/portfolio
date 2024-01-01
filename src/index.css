@@ -58,6 +58,9 @@ body {
   color: #fff;
 }
 
+element.style {
+  width: 800px;
+}
 .swiper-slide:nth-child(1n) {
   background-color: rgb(206, 17, 17);
 }

@@ -11,7 +11,7 @@ const Hero = () => {
 
       <div className=" flex flex-col md:flex-row md:items-end md:justify-between pt-10 md:pt-5">
         <div className="md:w-[600px]">
-          <h1 className="font-playfair text-[rgb(19,34,56)] text-[48px] md:text-[64px] font-bold leading-[42px] md:leading-[64px]">
+          <h1 className="font-playfair text-[rgb(19,34,56)] text-[48px] md:text-[64px] font-bold leading-[50px] md:leading-[64px]">
             Hi 👋 <br />
             I’m Mahdi Mortuza
           </h1>

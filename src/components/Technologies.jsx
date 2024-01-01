@@ -13,7 +13,7 @@ import ts from "../assets/logos/ts.svg";
 
 const Technologies = () => {
   return (
-    <div className="max-w-[1350px] mx-auto px-4 lg:px-8 mt-[35px] md:mt-[70px] pt-[0px] md:pt-[84px]">
+    <div className="max-w-[1350px] mx-auto px-4 lg:px-8 mt-[35px] md:mt-[70px] pt-1 md:pt-[84px]">
       <div className=" flex flex-col md:flex-row md:items-center md:justify-center gap-3 md:gap-8 ">
         <h1 className="font-playfair text-[38px] md:text-[64px] text-left md:text-right leading-[40px] md:leading-[66px]">
           What <br /> Technologies <br /> I use

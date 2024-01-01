@@ -23,7 +23,10 @@ const Projects = () => {
 
   return (
     <div className="max-w-[1350px] mx-auto relative pb-[90px]">
-      <img className="absolute top-0 right-0 -mt-96" src={objBlue} />
+      <img
+        className="absolute  md:top-0 -right-16 md:right-0 -mt-80 md:-mt-96"
+        src={objBlue}
+      />
       <h2 className="font-playfair text-[64px] text-center leading-[66px] mt-[100px]">
         Some of my recent <br /> projects
       </h2>

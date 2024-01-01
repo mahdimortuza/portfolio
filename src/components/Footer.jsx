@@ -6,7 +6,7 @@ const Footer = () => {
   const year = date.getFullYear();
 
   const navList = (
-    <ul className="font-raleway font-semibold text-lg flex gap-5 md:gap-14 text-[#222A35]">
+    <ul className="font-raleway font-semibold text-lg flex gap-5 md:gap-14 text-[#222A35] ">
       <li>
         <a className="px-3 py-2" href="#about">
           About
@@ -53,7 +53,7 @@ const Footer = () => {
     </ul>
   );
   return (
-    <div className="pb-10 flex flex-col items-center">
+    <div className="pb-10 flex flex-col items-center mt-[120px]">
       <img className="w-12 md:w-16 h-9 md:h-12" src={logo}></img>
 
       <div className="mt-8">{navList}</div>

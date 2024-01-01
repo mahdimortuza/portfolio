@@ -38,6 +38,9 @@ const StickyNavbar = () => {
       <li className="hidden md:block"></li>
       <li className="hidden md:block"></li>
       <li className="hidden md:block"></li>
+      <li className="hidden md:block"></li>
+      <li className="hidden md:block"></li>
+      <li className="hidden md:block"></li>
 
       <li>
         <a href="">

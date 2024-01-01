@@ -5,7 +5,7 @@ import obj2 from "../assets/fg-objects/fg-1.png";
 
 const ProjectIdeaCTA = () => {
   return (
-    <div className="bg-[#FEFAF6] max-w-[1350px] mx-auto">
+    <div className="bg-[#FEFAF6] max-w-[1350px] mx-auto pb-[83px] pt-[95px]">
       <div
         className="h-[450px] bg-no-repeat bg-center flex justify-center items-center relative"
         style={{ backgroundImage: `url(${titleBg})` }}
@@ -21,7 +21,7 @@ const ProjectIdeaCTA = () => {
           Let’s Talk
         </button>
         <img
-          className="absolute bottom-10 left-[300px] w-[72px] h-[69px]"
+          className="absolute bottom-10 left-[300px] w-[72px] h-[69px] "
           src={obj2}
         />
       </div>

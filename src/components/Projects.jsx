@@ -6,8 +6,23 @@ import objBlue from "../assets/bg-objects/obj-blue.svg";
 import sliderObj from "../assets/bg-objects/sliderObj.svg";
 
 const Projects = () => {
+  const sliderElements = [
+    {
+      header: "UniAid",
+      des: "Event-based crowdfunding website.",
+    },
+    {
+      header: "UniAid",
+      des: "Event-based crowdfunding website.",
+    },
+    {
+      header: "UniAid",
+      des: "Event-based crowdfunding website.",
+    },
+  ];
+
   return (
-    <div className="max-w-[1350px] mx-auto relative">
+    <div className="max-w-[1350px] mx-auto relative pb-[90px]">
       <img className="absolute top-0 right-0 -mt-96" src={objBlue} />
       <h2 className="font-playfair text-[64px] text-center leading-[66px] mt-[100px]">
         Some of my recent <br /> projects
@@ -21,15 +36,16 @@ const Projects = () => {
         modules={[EffectCards]}
         className="mySwiper mt-8"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {sliderElements.map((sliderElement) => (
+          <div key={sliderElement.header}>
+            <SwiperSlide>
+              <div>
+                <h3>{sliderElement.header}</h3>
+                <p>{sliderElement.des}</p>
+              </div>
+            </SwiperSlide>
+          </div>
+        ))}
       </Swiper>
     </div>
   );

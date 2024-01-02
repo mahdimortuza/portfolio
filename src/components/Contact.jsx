@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 const Contact = () => {
   const { register, handleSubmit } = useForm();
   const [data, setData] = useState("");
-
   return (
     <div className="bg-[#FEFAF6] max-w-[1350px] mx-auto flex flex-col md:flex-row md:justify-between md:px-48 pt-[50px] md:pt-[68px] px-4">
       <div>

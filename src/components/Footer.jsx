@@ -53,7 +53,7 @@ const Footer = () => {
     </ul>
   );
   return (
-    <div className="pb-10 flex flex-col items-center mt-[120px]">
+    <div className="pb-10 flex flex-col items-center mt-[60px] md:mt-[120px]">
       <img className="w-12 md:w-16 h-9 md:h-12" src={logo}></img>
 
       <div className="mt-8">{navList}</div>

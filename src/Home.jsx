@@ -1,6 +1,7 @@
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import StickyNavbar from "./components/Navigation";
+import ProjectIdeaCTA from "./components/ProjectIdeaCTA";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 
@@ -11,7 +12,7 @@ const Home = () => {
       <Hero />
       <Technologies />
       <Projects />
-      {/* <ProjectIdeaCTA /> */}
+      <ProjectIdeaCTA />
       {/* <Contact /> */}
       <Footer />
     </div>

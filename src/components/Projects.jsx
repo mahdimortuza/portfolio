@@ -22,7 +22,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="max-w-[1350px] mx-auto relative pb-[90px] px-4 lg:px-8">
+    <div className="max-w-[1350px] mx-auto relative pb-[35px] md:pb-[90px] px-4 lg:px-8">
       <img
         className="absolute  md:top-0 -right-0 md:right-0 -mt-80 md:-mt-96"
         src={objBlue}

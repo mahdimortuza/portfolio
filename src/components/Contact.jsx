@@ -30,7 +30,7 @@ const Contact = () => {
       </div>
       <div>
         <form
-          className="flex flex-col w-[360px] h-[256px] md:w-[448px] md:h-[328px] p-5 bg-[#EEEAE5] rounded-[8px] mt-[50px] md:mt-[0px]"
+          className="flex flex-col  md:w-[448px] md:h-[328px] p-5 bg-[#EEEAE5] rounded-[8px] mt-[50px] md:mt-[0px]"
           onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}
         >
           <input

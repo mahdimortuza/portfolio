@@ -1,3 +1,4 @@
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import StickyNavbar from "./components/Navigation";
@@ -13,7 +14,7 @@ const Home = () => {
       <Technologies />
       <Projects />
       <ProjectIdeaCTA />
-      {/* <Contact /> */}
+      <Contact />
       <Footer />
     </div>
   );

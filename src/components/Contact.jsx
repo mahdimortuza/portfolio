@@ -1,9 +1,33 @@
-import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 
 const Contact = () => {
   const { register, handleSubmit } = useForm();
   const [data, setData] = useState("");
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_loy0dzi",
+        "template_lqzb5bt",
+        form.current,
+        "sJWJP6mnHBszRsI9Q"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div
       name="contact"
@@ -32,26 +56,32 @@ const Contact = () => {
       </div>
       <div>
         <form
+          ref={form}
+          onSubmit={sendEmail}
           className="flex flex-col  md:w-[448px] md:h-[328px] p-5 bg-[#EEEAE5] rounded-[8px] mt-[50px] md:mt-[0px]"
-          onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}
+          // onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}
         >
           <input
             className="text-[#132238] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white w-full rounded-[6px]"
-            {...register("firstName")}
+            {...register("from_name")}
             placeholder="Your Name*"
+            name="from_name"
           />
           <input
             className="text-[#132238] mt-[10px] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white w-full rounded-[6px]"
-            {...register("firstName")}
+            {...register("from_email")}
             placeholder="Your Name*"
+            name="from_email"
           />
           <textarea
             cols="50"
             className="text-[#132238] mt-[10px] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white w-full rounded-[6px]"
-            {...register("aboutYou")}
+            {...register("message")}
             placeholder="About you"
+            name="message"
           />
-          <p>{data}</p>
+          {/* <p>{data}</p> */}
+          <input type="submit" value="Send" />
         </form>
       </div>
     </div>

@@ -1,7 +1,13 @@
-import "swiper/css";
-import "swiper/css/effect-cards";
-import { EffectCards } from "swiper/modules";
+// import required modules
+import { EffectCoverflow, Pagination } from "swiper/modules";
+
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import objBlue from "../assets/bg-objects/obj-blue.svg";
 import sliderObj from "../assets/bg-objects/sliderObj.svg";
 
@@ -34,10 +40,25 @@ const Projects = () => {
 
       {/* swiper slider section starts here  */}
       <Swiper
-        effect={"cards"}
+        effect={"coverflow"}
         grabCursor={true}
-        modules={[EffectCards]}
-        className="mySwiper mt-8 w-[270px] h-[368px] md:w-[426px] md:h-[573px]"
+        centeredSlides={true}
+        // loop={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2,
+        }}
+        pagination={{ el: ".swiper-pagination", clickable: true }}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+          clickable: true,
+        }}
+        modules={[EffectCoverflow, Pagination]}
+        className="swiper_container mt-10"
       >
         {sliderElements.map((sliderElement) => (
           <div key={sliderElement.header}>

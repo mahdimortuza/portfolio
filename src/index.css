@@ -4,21 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .swiper {
-  width: 426px;
-  height: 573px;
+/* .swiper_container {
+  height: 500px;
+  padding: 2rem 0;
+  position: relative;
 } */
 
 .swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #132238;
+  width: 37rem;
+  height: 28rem;
+  position: relative;
 }
-
 .swiper-slide:nth-child(1n) {
   background-color: #dfe2ff;
 }
@@ -30,3 +26,11 @@
 .swiper-slide:nth-child(3n) {
   background-color: #fff8df;
 }
+
+/* .slider-controler {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */

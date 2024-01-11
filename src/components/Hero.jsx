@@ -53,7 +53,7 @@ const Hero = () => {
         duration={1000}
         className="cursor-pointer"
       >
-        <FaChevronDown className="text-[#132238] mt-[60px] mx-auto text-[22px]" />
+        <FaChevronDown className="text-[#132238] mt-[20px] mx-auto text-[30px]" />
       </Link>
     </div>
   );

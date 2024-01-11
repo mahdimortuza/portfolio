@@ -1,11 +1,13 @@
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const form = useRef();
 
-  const successMessage = () => toast("Message sent successfully 😊");
+  const successMessage = "Message sent successfully 😊";
+  const failMessage = "Failed to send message 😞";
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -19,11 +21,13 @@ const Contact = () => {
       .then(
         (result) => {
           if (result) {
-            return successMessage;
+            window.alert(successMessage);
           }
         },
         (error) => {
-          console.log(error.text);
+          if (error) {
+            window.alert(failMessage);
+          }
         }
       );
   };
@@ -31,7 +35,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="bg-[#FEFAF6] max-w-[1350px] mx-auto flex flex-col md:flex-row md:justify-between md:px-48 pt-[50px] md:pt-[68px] px-4"
+      className="bg-[#FEFAF6] max-w-[1350px] mx-auto flex flex-col md:flex-row md:justify-between items-center md:px-48 pt-[50px] md:pt-[68px] px-4"
     >
       <div>
         <h3 className="text-[#3D434D]  font-raleway text-[20px] md:text-[24px] font-semibold leading-[32px]">
@@ -58,27 +62,34 @@ const Contact = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="flex flex-col  md:w-[448px] md:h-[328px] p-5 bg-[#EEEAE5] rounded-[8px] mt-[50px] md:mt-[0px]"
+          className="flex flex-col  md:w-[448px]  p-5 bg-[#EEEAE5] rounded-[8px] mt-[50px] md:mt-[0px]"
         >
           <input
+            type="text"
             className="text-[#132238] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white w-full rounded-[6px]"
             placeholder="Your Name*"
             name="from_name"
           />
           <input
+            type="email"
             className="text-[#132238] mt-[10px] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white w-full rounded-[6px]"
-            placeholder="Your Name*"
+            placeholder="Your Email*"
             name="from_email"
           />
           <textarea
             cols="50"
-            className="text-[#132238] mt-[10px] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white w-full rounded-[6px]"
+            type="text"
+            className="text-[#132238] mt-[10px] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white rounded-[6px]"
             placeholder="About you"
             name="message"
           />
-          <input onClick={successMessage} type="submit" value="Send" />
-          <Toaster />
+          <input
+            className="bg-gradient-to-r from-[#75B4F1] to-[#A573F0] rounded-[6px] text-white mt-[10px] py-1 font-normal leading-8 font-raleway text-[16px]"
+            type="submit"
+            value="Send"
+          />
         </form>
+        <Toaster />
       </div>
     </div>
   );

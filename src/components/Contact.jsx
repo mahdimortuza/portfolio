@@ -5,7 +5,10 @@ const Contact = () => {
   const { register, handleSubmit } = useForm();
   const [data, setData] = useState("");
   return (
-    <div className="bg-[#FEFAF6] max-w-[1350px] mx-auto flex flex-col md:flex-row md:justify-between md:px-48 pt-[50px] md:pt-[68px] px-4">
+    <div
+      name="contact"
+      className="bg-[#FEFAF6] max-w-[1350px] mx-auto flex flex-col md:flex-row md:justify-between md:px-48 pt-[50px] md:pt-[68px] px-4"
+    >
       <div>
         <h3 className="text-[#3D434D]  font-raleway text-[20px] md:text-[24px] font-semibold leading-[32px]">
           Mail me

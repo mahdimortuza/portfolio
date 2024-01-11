@@ -1,4 +1,5 @@
 import { FaChevronDown } from "react-icons/fa";
+import { Link } from "react-scroll";
 import bgObject from "../assets/bg-objects/obj-1.svg";
 import fgObj1 from "../assets/fg-objects/fg-1.png";
 import fgObj2 from "../assets/fg-objects/fg-2.png";
@@ -6,7 +7,10 @@ import img from "../assets/image/mahdi.png";
 
 const Hero = () => {
   return (
-    <div className="relative px-4 lg:px-8 bg-[#FEFAF6] max-w-[1350px] mx-auto pb-[37px] md:pb-16">
+    <div
+      name="about"
+      className="relative px-4 lg:px-8 bg-[#FEFAF6] max-w-[1350px] mx-auto pb-[37px] md:pb-16"
+    >
       <img className="absolute top-0 right-0" src={bgObject}></img>
 
       <div className=" flex flex-col md:flex-row md:items-end md:justify-between pt-10 md:pt-5">
@@ -41,7 +45,16 @@ const Hero = () => {
           />
         </div>
       </div>
-      <FaChevronDown className="text-[#132238] mt-[60px] mx-auto text-[22px]" />
+      <Link
+        to="skills"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={1000}
+        className="cursor-pointer"
+      >
+        <FaChevronDown className="text-[#132238] mt-[60px] mx-auto text-[22px]" />
+      </Link>
     </div>
   );
 };

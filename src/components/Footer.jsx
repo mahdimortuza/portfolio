@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
+import { Link } from "react-scroll";
 import logo from "../assets/logo/logo.svg";
 const Footer = () => {
   const date = new Date();
@@ -8,25 +9,56 @@ const Footer = () => {
   const navList = (
     <ul className="font-raleway font-semibold text-lg flex gap-5 md:gap-14 text-[#222A35] ">
       <li>
-        <a className="px-3 py-2" href="#about">
+        <Link
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={1000}
+          className="px-3 py-2 cursor-pointer"
+        >
           About
-        </a>
+        </Link>
       </li>
       <li>
-        <a className="px-3 py-2" href="#">
+        <Link
+          to="skills"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          className="px-3 py-2 cursor-pointer"
+          href="#"
+        >
           Skills
-        </a>
+        </Link>
       </li>
       <li>
-        <a className="px-3 py-2" href="#">
+        <Link
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={-60}
+          duration={1000}
+          className="px-3 py-2 cursor-pointer"
+          href="#"
+        >
           Work
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a className="px-3 py-2" href="#">
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={1000}
+          className="px-3 py-2 cursor-pointer"
+          href="#"
+        >
           Contact
-        </a>
+        </Link>
       </li>
     </ul>
   );
@@ -34,13 +66,13 @@ const Footer = () => {
   const social = (
     <ul className="flex item-center justify-center gap-16 ">
       <li>
-        <a href="">
+        <a href="https://www.linkedin.com/in/mahdi-mortuza">
           <FaLinkedinIn className="w-6 h-5 text-[#222A35]" />
         </a>
       </li>
 
       <li>
-        <a href="">
+        <a href="https://github.com/mahdimortuza">
           <FaGithub className="w-6 h-5 text-[#222A35]" />
         </a>
       </li>
@@ -54,8 +86,9 @@ const Footer = () => {
   );
   return (
     <div className="pb-10 flex flex-col items-center mt-[60px] md:mt-[120px]">
-      <img className="w-12 md:w-16 h-9 md:h-12" src={logo}></img>
-
+      <a href="/">
+        <img className="w-12 md:w-16 h-9 md:h-12" src={logo}></img>
+      </a>
       <div className="mt-8">{navList}</div>
       <div className="mx-auto mt-8"> {social}</div>
 

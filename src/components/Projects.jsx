@@ -1,13 +1,9 @@
-// import required modules
-import { EffectCoverflow, Pagination } from "swiper/modules";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
+import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import objBlue from "../assets/bg-objects/obj-blue.svg";
 import sliderObj from "../assets/bg-objects/sliderObj.svg";
 
@@ -28,7 +24,10 @@ const Projects = () => {
   ];
 
   return (
-    <div className="max-w-[1350px] mx-auto relative pb-[35px] md:pb-[90px] px-4 lg:px-8">
+    <div
+      name="projects"
+      className="max-w-[1350px] mx-auto relative pb-[35px] md:pb-[40px] px-4 lg:px-8"
+    >
       <img
         className="absolute  md:top-0 -right-0 md:right-0 -mt-80 md:-mt-96"
         src={objBlue}
@@ -63,7 +62,7 @@ const Projects = () => {
         {sliderElements.map((sliderElement) => (
           <div key={sliderElement.header}>
             <SwiperSlide>
-              <div className="">
+              <div>
                 <h3 className="px-4 font-playfair text-[32px] md:text-[36px] font-bold">
                   {sliderElement.header}
                 </h3>
@@ -75,6 +74,10 @@ const Projects = () => {
           </div>
         ))}
       </Swiper>
+
+      <div className="slider-controler">
+        <div className="swiper-pagination"></div>
+      </div>
     </div>
   );
 };

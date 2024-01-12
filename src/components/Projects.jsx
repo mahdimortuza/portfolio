@@ -6,20 +6,26 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import objBlue from "../assets/bg-objects/obj-blue.svg";
 import sliderObj from "../assets/bg-objects/sliderObj.svg";
+import console from "../assets/projects/Console.png";
+import uniaid from "../assets/projects/UniAid.png";
+import coco from "../assets/projects/coco.png";
 
 const Projects = () => {
   const sliderElements = [
     {
       header: "UniAid",
       des: "Event-based crowdfunding website.",
+      img: uniaid,
     },
     {
       header: "UniAid",
       des: "Event-based crowdfunding website.",
+      img: coco,
     },
     {
       header: "UniAid",
       des: "Event-based crowdfunding website.",
+      img: console,
     },
   ];
 

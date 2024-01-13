@@ -24,11 +24,14 @@ const Hero = () => {
             scalable products using MERN stack technology.
           </p>
           <div className="flex justify-center md:justify-start mt-[26px] md:mt-[60px] font-raleway leading-[40px] text-[18px] md:text-xl font-bold gap-7">
-            <button className="px-[14px] md:px-5 py-2 md:py-[10px] bg-gradient-to-r from-[#75B4F1] to-[#A573F0] rounded-[4px] text-white">
+            <button
+              className="px-[14px] md:px-5 py-2 md:py-[10px] bg-gradient-to-r from-[#75B4F1] to-[#A573F0] border-2 hover:border-[#4285F4]
+             rounded-[4px] text-white"
+            >
               Let’s Talk
             </button>
 
-            <button className="px-[14px] md:px-5 py-2 md:py-[10px] text-[#4285F4] border-2 border-[#4285F4] rounded-[4px]">
+            <button className="px-[14px] md:px-5 py-2 md:py-[10px] text-[#4285F4] border-2 border-[#4285F4] hover:bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:text-white rounded-[4px]">
               My Resume
             </button>
           </div>

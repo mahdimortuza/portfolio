@@ -62,7 +62,7 @@ const Contact = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="flex flex-col  md:w-[448px]  p-5 bg-[#EEEAE5] rounded-[8px] mt-[50px] md:mt-[0px]"
+          className="flex flex-col w-[350px]  md:w-[448px]  p-5 bg-[#EEEAE5] rounded-[8px] mt-[50px] md:mt-[0px]"
         >
           <input
             type="text"

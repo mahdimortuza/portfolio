@@ -73,18 +73,18 @@ const Contact = () => {
           <input
             type="email"
             className="text-[#132238] mt-[10px] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white w-full rounded-[6px]"
-            placeholder="Your Email*"
+            placeholder="Your Email Address*"
             name="from_email"
           />
           <textarea
             cols="50"
             type="text"
             className="text-[#132238] mt-[10px] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white rounded-[6px]"
-            placeholder="About you"
+            placeholder="What you want to say*"
             name="message"
           />
           <input
-            className="bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:border hover:border-[#4285F4]  rounded-[6px] text-white mt-[10px] py-1 font-normal leading-8 font-raleway text-[16px]"
+            className="bg-gradient-to-r cursor-pointer from-[#75B4F1] to-[#A573F0] hover:border hover:border-[#4285F4]  rounded-[6px] text-white mt-[10px] py-1 font-normal leading-8 font-raleway text-[16px]"
             type="submit"
             value="Send"
           />

@@ -17,7 +17,7 @@ const ProjectIdeaCTA = () => {
         <h1 className=" text-[#132238] text-center text-[32px] md:text-[64px] font-bold leading-[40px] md:leading-[66px] font-playfair">
           Have a project idea? <br /> Discuss now!
         </h1>
-        <button className="absolute -bottom-5 md:bottom-[68px] text-[18px] md:text-[20px] text-white leading-[24px] font-bold bg-gradient-to-r from-[#75B4F1] to-[#A573F0] rounded-[4px] px-[16px] py-[8px]">
+        <button className="absolute -bottom-5 md:bottom-[68px] text-[18px] md:text-[20px] text-white leading-[24px] font-bold bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:border hover:border-[#4285F4]  rounded-[4px] px-[16px] py-[8px]">
           Let’s Talk
         </button>
         <img

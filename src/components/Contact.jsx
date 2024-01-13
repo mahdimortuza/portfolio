@@ -84,7 +84,7 @@ const Contact = () => {
             name="message"
           />
           <input
-            className="bg-gradient-to-r from-[#75B4F1] to-[#A573F0] rounded-[6px] text-white mt-[10px] py-1 font-normal leading-8 font-raleway text-[16px]"
+            className="bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:border hover:border-[#4285F4]  rounded-[6px] text-white mt-[10px] py-1 font-normal leading-8 font-raleway text-[16px]"
             type="submit"
             value="Send"
           />

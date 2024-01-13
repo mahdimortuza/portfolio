@@ -29,58 +29,97 @@ const Technologies = () => {
       </div>
       <div className="flex flex-row md:flex-col justify-between md:gap-16 px-10 md:px-0 items-center mt-[40px] md:mt-[100px] mb-[160px]">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16">
-          <img
-            className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
-            src={html}
-          ></img>
-          <img
-            className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
-            src={css}
-          ></img>
-          <img
-            className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
-            src={js}
-          ></img>
-          <img
-            className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
-            src={react}
-          ></img>
-          <img
-            className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
-            src={ts}
-          ></img>
+          <div className="tooltip">
+            <img
+              className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
+              src={html}
+            />
+            <span className="tooltiptext">HTML</span>
+          </div>
+
+          <div className="tooltip">
+            <img
+              className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
+              src={css}
+            />
+            <span className="tooltiptext">CSS</span>
+          </div>
+
+          <div className="tooltip">
+            <img
+              className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
+              src={js}
+            />
+            <span className="tooltiptext">JavaScript</span>
+          </div>
+
+          <div className="tooltip">
+            <img
+              className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
+              src={react}
+            />
+            <span className="tooltiptext">React</span>
+          </div>
+          <div className="tooltip">
+            <img
+              className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
+              src={ts}
+            />
+            <span className="tooltiptext">TypeScript</span>
+          </div>
         </div>
         <div className="flex flex-col md:flex-row gap-12  md:gap-16">
-          <img
-            className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
-            src={tailwind}
-          ></img>
-          <img
-            className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
-            src={redux}
-          ></img>
-          <img
-            className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
-            src={node}
-          ></img>
-          <img
-            className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
-            src={mongoose}
-          ></img>
+          <div className="tooltip">
+            <img
+              className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
+              src={tailwind}
+            />
+            <span className="tooltiptext">Tailwind</span>
+          </div>
+          <div className="tooltip">
+            <img
+              className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
+              src={redux}
+            />
+            <span className="tooltiptext">Redux</span>
+          </div>
+          <div className="tooltip">
+            <img
+              className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
+              src={node}
+            />
+            <span className="tooltiptext">NodeJS</span>
+          </div>
+          <div className="tooltip">
+            <img
+              className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
+              src={mongoose}
+            />
+            <span className="tooltiptext">Mongoose</span>
+          </div>
         </div>
         <div className="flex flex-col md:flex-row gap-12  md:gap-16">
-          <img
-            className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
-            src={mongodb}
-          ></img>
-          <img
-            className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
-            src={express}
-          ></img>
-          <img
-            className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
-            src={firebase}
-          ></img>
+          <div className="tooltip">
+            <img
+              className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
+              src={mongodb}
+            />
+            <span className="tooltiptext">MongoDB</span>
+          </div>
+          <div className="tooltip">
+            <img
+              className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
+              src={express}
+            />
+            <span className="tooltiptext">ExpressJS</span>
+          </div>
+          <div className="tooltip">
+            <img
+              className="w-[62px] h-[62px] md:w-[80px] md:h-[80px]"
+              src={firebase}
+            />
+            <span className="tooltiptext">Firebase</span>
+          </div>
         </div>
       </div>
     </div>

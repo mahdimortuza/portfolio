@@ -43,6 +43,8 @@ const Technologies = () => {
           and back-end technologies.
         </motion.p>
       </div>
+
+      {/* technologies all images */}
       <div className="flex flex-row md:flex-col justify-between md:gap-16 px-10 md:px-0 items-center mt-[40px] md:mt-[100px] mb-[160px]">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16">
           <motion.div
@@ -51,9 +53,13 @@ const Technologies = () => {
             transition={{ delay: 0.7, duration: 1 }}
             className="tooltip"
           >
-            <img
+            <motion.img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={html}
+              whileHover={{
+                scale: 1.09,
+                transition: { duration: 0.1 },
+              }}
             />
             <span className="tooltiptext">HTML</span>
           </motion.div>
@@ -64,9 +70,13 @@ const Technologies = () => {
             transition={{ delay: 0.7, duration: 1 }}
             className="tooltip"
           >
-            <img
+            <motion.img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={css}
+              whileHover={{
+                scale: 1.09,
+                transition: { duration: 0.1 },
+              }}
             />
             <span className="tooltiptext">CSS</span>
           </motion.div>
@@ -77,7 +87,11 @@ const Technologies = () => {
             transition={{ delay: 0.7, duration: 1 }}
             className="tooltip"
           >
-            <img
+            <motion.img
+              whileHover={{
+                scale: 1.09,
+                transition: { duration: 0.1 },
+              }}
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={js}
             />
@@ -90,7 +104,11 @@ const Technologies = () => {
             transition={{ delay: 0.7, duration: 1 }}
             className="tooltip"
           >
-            <img
+            <motion.img
+              whileHover={{
+                scale: 1.09,
+                transition: { duration: 0.1 },
+              }}
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={react}
             />
@@ -102,7 +120,11 @@ const Technologies = () => {
             transition={{ delay: 0.7, duration: 1 }}
             className="tooltip"
           >
-            <img
+            <motion.img
+              whileHover={{
+                scale: 1.09,
+                transition: { duration: 0.1 },
+              }}
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={ts}
             />
@@ -116,7 +138,11 @@ const Technologies = () => {
             transition={{ delay: 0.7, duration: 1 }}
             className="tooltip"
           >
-            <img
+            <motion.img
+              whileHover={{
+                scale: 1.09,
+                transition: { duration: 0.1 },
+              }}
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={tailwind}
             />
@@ -128,7 +154,11 @@ const Technologies = () => {
             transition={{ delay: 0.7, duration: 1 }}
             className="tooltip"
           >
-            <img
+            <motion.img
+              whileHover={{
+                scale: 1.09,
+                transition: { duration: 0.1 },
+              }}
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={redux}
             />
@@ -140,7 +170,11 @@ const Technologies = () => {
             transition={{ delay: 0.7, duration: 1 }}
             className="tooltip"
           >
-            <img
+            <motion.img
+              whileHover={{
+                scale: 1.09,
+                transition: { duration: 0.1 },
+              }}
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={node}
             />
@@ -152,7 +186,11 @@ const Technologies = () => {
             transition={{ delay: 0.7, duration: 1 }}
             className="tooltip"
           >
-            <img
+            <motion.img
+              whileHover={{
+                scale: 1.09,
+                transition: { duration: 0.1 },
+              }}
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={mongoose}
             />
@@ -166,7 +204,11 @@ const Technologies = () => {
             transition={{ delay: 0.7, duration: 1 }}
             className="tooltip"
           >
-            <img
+            <motion.img
+              whileHover={{
+                scale: 1.09,
+                transition: { duration: 0.1 },
+              }}
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={mongodb}
             />
@@ -178,7 +220,11 @@ const Technologies = () => {
             transition={{ delay: 0.7, duration: 1 }}
             className="tooltip"
           >
-            <img
+            <motion.img
+              whileHover={{
+                scale: 1.09,
+                transition: { duration: 0.1 },
+              }}
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={express}
             />
@@ -190,7 +236,11 @@ const Technologies = () => {
             transition={{ delay: 0.7, duration: 1 }}
             className="tooltip"
           >
-            <img
+            <motion.img
+              whileHover={{
+                scale: 1.09,
+                transition: { duration: 0.1 },
+              }}
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={firebase}
             />

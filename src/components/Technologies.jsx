@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import css from "../assets/logos/css.svg";
 import express from "../assets/logos/express.svg";
 import firebase from "../assets/logos/firebase.svg";
@@ -18,108 +19,183 @@ const Technologies = () => {
       className="max-w-[1350px] mx-auto px-4 lg:px-8 mt-[35px] md:mt-[70px] pt-1 md:pt-[84px]"
     >
       <div className=" flex flex-col md:flex-row md:items-center md:justify-center gap-3 md:gap-8 ">
-        <h1 className="font-playfair text-[38px] md:text-[64px] text-left md:text-right leading-[40px] md:leading-[66px]">
+        <motion.h1
+          className="font-playfair text-[38px] md:text-[64px] text-left md:text-right leading-[40px] md:leading-[66px]"
+          initial={{ opacity: 0, marginBottom: -15 }}
+          whileInView={{ opacity: 1, marginBottom: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
           What <br /> Technologies <br /> I use
-        </h1>
-        <div className="w-[176px] h-[1px] md:w-[1px] md:h-[230px] bg-[#132238]"></div>
-        <p className="w-full md:w-[612px] font-raleway text-[20px] md:text-[32px] font-medium leading-[24px] md:leading-[40px]">
+        </motion.h1>
+        <motion.div
+          className="w-[176px] h-[1px] md:w-[1px] md:h-[230px] bg-[#132238]"
+          initial={{ opacity: 0, marginBottom: 0 }}
+          whileInView={{ opacity: 1, marginBottom: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        ></motion.div>
+        <motion.p
+          className="w-full md:w-[612px] font-raleway text-[20px] md:text-[32px] font-medium leading-[24px] md:leading-[40px]"
+          initial={{ opacity: 0, marginBottom: -15 }}
+          whileInView={{ opacity: 1, marginBottom: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
           I assure stability, security, and a unique UX with tailored front-end
           and back-end technologies.
-        </p>
+        </motion.p>
       </div>
       <div className="flex flex-row md:flex-col justify-between md:gap-16 px-10 md:px-0 items-center mt-[40px] md:mt-[100px] mb-[160px]">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16">
-          <div className="tooltip">
+          <motion.div
+            initial={{ opacity: 0, marginBottom: -15 }}
+            whileInView={{ opacity: 1, marginBottom: 0 }}
+            transition={{ delay: 0.7, duration: 1 }}
+            className="tooltip"
+          >
             <img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={html}
             />
             <span className="tooltiptext">HTML</span>
-          </div>
+          </motion.div>
 
-          <div className="tooltip">
+          <motion.div
+            initial={{ opacity: 0, marginBottom: -15 }}
+            whileInView={{ opacity: 1, marginBottom: 0 }}
+            transition={{ delay: 0.7, duration: 1 }}
+            className="tooltip"
+          >
             <img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={css}
             />
             <span className="tooltiptext">CSS</span>
-          </div>
+          </motion.div>
 
-          <div className="tooltip">
+          <motion.div
+            initial={{ opacity: 0, marginBottom: -15 }}
+            whileInView={{ opacity: 1, marginBottom: 0 }}
+            transition={{ delay: 0.7, duration: 1 }}
+            className="tooltip"
+          >
             <img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={js}
             />
             <span className="tooltiptext">JavaScript</span>
-          </div>
+          </motion.div>
 
-          <div className="tooltip">
+          <motion.div
+            initial={{ opacity: 0, marginBottom: -15 }}
+            whileInView={{ opacity: 1, marginBottom: 0 }}
+            transition={{ delay: 0.7, duration: 1 }}
+            className="tooltip"
+          >
             <img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={react}
             />
             <span className="tooltiptext">React</span>
-          </div>
-          <div className="tooltip">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, marginBottom: -15 }}
+            whileInView={{ opacity: 1, marginBottom: 0 }}
+            transition={{ delay: 0.7, duration: 1 }}
+            className="tooltip"
+          >
             <img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={ts}
             />
             <span className="tooltiptext">TypeScript</span>
-          </div>
+          </motion.div>
         </div>
         <div className="flex flex-col md:flex-row gap-12  md:gap-16">
-          <div className="tooltip">
+          <motion.div
+            initial={{ opacity: 0, marginBottom: -15 }}
+            whileInView={{ opacity: 1, marginBottom: 0 }}
+            transition={{ delay: 0.7, duration: 1 }}
+            className="tooltip"
+          >
             <img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={tailwind}
             />
             <span className="tooltiptext">Tailwind</span>
-          </div>
-          <div className="tooltip">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, marginBottom: -15 }}
+            whileInView={{ opacity: 1, marginBottom: 0 }}
+            transition={{ delay: 0.7, duration: 1 }}
+            className="tooltip"
+          >
             <img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={redux}
             />
             <span className="tooltiptext">Redux</span>
-          </div>
-          <div className="tooltip">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, marginBottom: -15 }}
+            whileInView={{ opacity: 1, marginBottom: 0 }}
+            transition={{ delay: 0.7, duration: 1 }}
+            className="tooltip"
+          >
             <img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={node}
             />
             <span className="tooltiptext">NodeJS</span>
-          </div>
-          <div className="tooltip">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, marginBottom: -15 }}
+            whileInView={{ opacity: 1, marginBottom: 0 }}
+            transition={{ delay: 0.7, duration: 1 }}
+            className="tooltip"
+          >
             <img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={mongoose}
             />
             <span className="tooltiptext">Mongoose</span>
-          </div>
+          </motion.div>
         </div>
         <div className="flex flex-col md:flex-row gap-12  md:gap-16">
-          <div className="tooltip">
+          <motion.div
+            initial={{ opacity: 0, marginBottom: -15 }}
+            whileInView={{ opacity: 1, marginBottom: 0 }}
+            transition={{ delay: 0.7, duration: 1 }}
+            className="tooltip"
+          >
             <img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={mongodb}
             />
             <span className="tooltiptext">MongoDB</span>
-          </div>
-          <div className="tooltip">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, marginBottom: -15 }}
+            whileInView={{ opacity: 1, marginBottom: 0 }}
+            transition={{ delay: 0.7, duration: 1 }}
+            className="tooltip"
+          >
             <img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={express}
             />
             <span className="tooltiptext">ExpressJS</span>
-          </div>
-          <div className="tooltip">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, marginBottom: -15 }}
+            whileInView={{ opacity: 1, marginBottom: 0 }}
+            transition={{ delay: 0.7, duration: 1 }}
+            className="tooltip"
+          >
             <img
               className="w-[62px] h-[62px] md:w-[80px] md:h-[80px] cursor-pointer"
               src={firebase}
             />
             <span className="tooltiptext">Firebase</span>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

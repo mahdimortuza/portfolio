@@ -1,7 +1,7 @@
+import { motion } from "framer-motion";
 import titleBg from "../assets/bg-objects/section-title-bg.svg";
-import obj1 from "../assets/fg-objects/fg-2.png";
-
 import obj2 from "../assets/fg-objects/fg-1.png";
+import obj1 from "../assets/fg-objects/fg-2.png";
 
 const ProjectIdeaCTA = () => {
   return (
@@ -14,12 +14,24 @@ const ProjectIdeaCTA = () => {
           className="absolute top-16 right-[530px] w-[45px] md:w-[53px] h-[46px] md:h-[51px]"
           src={obj1}
         />
-        <h1 className=" text-[#132238] text-center text-[32px] md:text-[64px] font-bold leading-[40px] md:leading-[66px] font-playfair">
+        <motion.h1
+          className=" text-[#132238] text-center text-[32px] md:text-[64px] font-bold leading-[40px] md:leading-[66px] font-playfair"
+          initial={{ opacity: 0, marginTop: 15 }}
+          whileInView={{ opacity: 1, marginTop: 0 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
           Have a project idea? <br /> Discuss now!
-        </h1>
-        <button className="absolute -bottom-5 md:bottom-[68px] text-[18px] md:text-[20px] text-white leading-[24px] font-bold bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:border hover:border-[#4285F4]  rounded-[4px] px-[16px] py-[8px]">
+        </motion.h1>
+        <motion.button
+          className="absolute -bottom-5 md:bottom-[68px] text-[18px] md:text-[20px] text-white leading-[24px] font-bold bg-gradient-to-r from-[#75B4F1] to-[#A573F0]  rounded-[4px] px-[16px] py-[8px]"
+          whileHover={{
+            scale: 1.05,
+            transition: { duration: 0.1 },
+          }}
+          whileTap={{ scale: 0.9 }}
+        >
           Let’s Talk
-        </button>
+        </motion.button>
         <img
           className="absolute -bottom-10 md:bottom-10 left-[30px] md:left-[300px] w-[40px] md:w-[72px] h-[40px] md:h-[69px] "
           src={obj2}

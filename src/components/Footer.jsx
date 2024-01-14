@@ -1,13 +1,20 @@
+import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 import { Link } from "react-scroll";
 import logo from "../assets/logo/logo.svg";
+
 const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
 
   const navList = (
-    <ul className="font-raleway font-semibold text-lg flex gap-5 md:gap-14 text-[#222A35] ">
+    <motion.ul
+      className="font-raleway font-semibold text-lg flex gap-5 md:gap-14 text-[#222A35] "
+      initial={{ opacity: 0, marginBottom: 15 }}
+      whileInView={{ opacity: 1, marginBottom: 0 }}
+      transition={{ delay: 0.5, duration: 1 }}
+    >
       <li>
         <Link
           to="about"
@@ -60,7 +67,7 @@ const Footer = () => {
           Contact
         </Link>
       </li>
-    </ul>
+    </motion.ul>
   );
 
   const social = (
@@ -87,10 +94,31 @@ const Footer = () => {
   return (
     <div className="pb-10 flex flex-col items-center mt-[60px] md:mt-[120px]">
       <a href="/">
-        <img className="w-12 md:w-16 h-9 md:h-12" src={logo}></img>
+        <motion.img
+          className="w-12 md:w-16 h-9 md:h-12"
+          src={logo}
+          initial={{ opacity: 0, marginBottom: 15 }}
+          whileInView={{ opacity: 1, marginBottom: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        ></motion.img>
       </a>
-      <div className="mt-8">{navList}</div>
-      <div className="mx-auto mt-8"> {social}</div>
+      <motion.div
+        className="mt-8"
+        initial={{ opacity: 0, marginBottom: 15 }}
+        whileInView={{ opacity: 1, marginBottom: 0 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+      >
+        {navList}
+      </motion.div>
+      <motion.div
+        className="mx-auto mt-8"
+        initial={{ opacity: 0, marginBottom: 15 }}
+        whileInView={{ opacity: 1, marginBottom: 0 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+      >
+        {" "}
+        {social}
+      </motion.div>
 
       <h1 className=" mt-[76px] font-raleway text-[15px] font-[400] text-center text-[#5C606C]">
         &copy; Copyright Mahdi Mortuza, {year}

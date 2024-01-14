@@ -34,25 +34,48 @@ const Hero = () => {
             A full-stack web developer. I solve web problems by crafting
             scalable products using MERN stack technology.
           </motion.p>
-          <div className="flex justify-center md:justify-start mt-[26px] md:mt-[60px] font-raleway leading-[40px] text-[18px] md:text-xl font-bold gap-7">
-            <button
-              className="px-[14px] md:px-5 py-2 md:py-[10px] bg-gradient-to-r from-[#75B4F1] to-[#A573F0] border-2 hover:border-[#4285F4]
+          <motion.div
+            className="flex justify-center md:justify-start mt-[26px] md:mt-[60px] font-raleway leading-[40px] text-[18px] md:text-xl font-bold gap-7"
+            initial={{ opacity: 0, marginLeft: 15 }}
+            whileInView={{ opacity: 1, marginLeft: 0 }}
+            transition={{ delay: 1, duration: 0.5 }}
+          >
+            <motion.button
+              className="px-[14px] md:px-5 py-2 md:py-[10px] bg-gradient-to-r from-[#75B4F1] to-[#A573F0] 
              rounded-[4px] text-white"
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.1 },
+              }}
+              whileTap={{ scale: 0.9 }}
             >
               Let’s Talk
-            </button>
+            </motion.button>
 
-            <button className="px-[14px] md:px-5 py-2 md:py-[10px] text-[#4285F4] border-2 border-[#4285F4] hover:bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:text-white rounded-[4px]">
+            <motion.button
+              className="px-[14px] md:px-5 py-2 md:py-[10px] text-[#4285F4] border-2  border-[#4285F4] hover:bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:text-white rounded-[4px]"
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.1 },
+              }}
+              whileTap={{ scale: 0.9 }}
+            >
               My Resume
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </div>
         <div className="relative">
           <img
             src={fgObj1}
             className="absolute left-0 top-10 md:top-16 w-[45px] h-[43px] md:w-[72px]  md:h-[69px] "
           />
-          <img className="" src={img}></img>
+          <motion.img
+            className=""
+            initial={{ opacity: 0, marginRight: 20 }}
+            whileInView={{ opacity: 1, marginRight: 0 }}
+            transition={{ duration: 1 }}
+            src={img}
+          ></motion.img>
           <img
             src={fgObj2}
             className="absolute right-28 -mt-[15] md:-mt-[20px] h-[38px] md:w-[72px]  md:h-[69px]"

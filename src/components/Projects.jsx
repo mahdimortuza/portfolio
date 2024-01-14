@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
@@ -38,9 +39,14 @@ const Projects = () => {
         className="absolute  md:top-0 -right-0 md:right-0 -mt-80 md:-mt-96"
         src={objBlue}
       />
-      <h2 className="font-playfair text-[38px] md:text-[64px] text-left md:text-center leading-[40px] md:leading-[66px] mt-[100px]">
+      <motion.h2
+        className="font-playfair text-[38px] md:text-[64px] text-left md:text-center leading-[40px] md:leading-[66px] mt-[100px]"
+        initial={{ opacity: 0, marginBottom: -15 }}
+        whileInView={{ opacity: 1, marginBottom: 0 }}
+        transition={{ delay: 1, duration: 1 }}
+      >
         Some of my recent <br /> projects
-      </h2>
+      </motion.h2>
       <img className="absolute top-0 left-0" src={sliderObj} />
 
       {/* swiper slider section starts here  */}
@@ -89,18 +95,28 @@ const Projects = () => {
                     >
                       Technologies
                     </a> */}
-                    <a
+                    <motion.a
                       className=" border-[2px] border-[#4285F4] px-[6px] py-[3px] md:px-[10px] md:py-[5px] hover:bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:text-white rounded-[4px]"
                       href="/"
+                      whileHover={{
+                        scale: 1.05,
+                        transition: { duration: 0.1 },
+                      }}
+                      whileTap={{ scale: 0.9 }}
                     >
                       Source Code
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
                       className=" border-[2px] border-[#4285F4] px-[6px] py-[3px] md:px-[10px] md:py-[5px] hover:bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:text-white rounded-[4px]"
                       href="/"
+                      whileHover={{
+                        scale: 1.05,
+                        transition: { duration: 0.1 },
+                      }}
+                      whileTap={{ scale: 0.9 }}
                     >
                       Live Site
-                    </a>
+                    </motion.a>
                   </div>
                 </div>
               </div>

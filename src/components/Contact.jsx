@@ -1,7 +1,7 @@
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 import { Toaster } from "react-hot-toast";
-
 const Contact = () => {
   const form = useRef();
 
@@ -37,7 +37,11 @@ const Contact = () => {
       name="contact"
       className="bg-[#fffed0] max-w-[1350px] mx-auto flex flex-col md:flex-row md:justify-between items-center md:px-48 pt-[50px] md:pt-[68px] px-4"
     >
-      <div>
+      <motion.div
+        initial={{ opacity: 0, marginLeft: -15 }}
+        whileInView={{ opacity: 1, marginLeft: 0 }}
+        transition={{ delay: 1, duration: 0.8 }}
+      >
         <h3 className="text-[#3D434D]  font-raleway text-[20px] md:text-[24px] font-semibold leading-[32px]">
           Mail me
         </h3>
@@ -57,8 +61,12 @@ const Contact = () => {
           Free School Street, <br />
           Dhaka 1205, Bangladesh
         </p>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, marginRight: -15 }}
+        whileInView={{ opacity: 1, marginRight: 0 }}
+        transition={{ delay: 1, duration: 0.8 }}
+      >
         <form
           ref={form}
           onSubmit={sendEmail}
@@ -66,31 +74,36 @@ const Contact = () => {
         >
           <input
             type="text"
-            className="text-[#132238] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white w-full rounded-[6px]"
+            className="text-[#132238] outline-none font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white w-full rounded-[6px]"
             placeholder="Your Name*"
             name="from_name"
           />
           <input
             type="email"
-            className="text-[#132238] mt-[10px] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white w-full rounded-[6px]"
+            className="text-[#132238] outline-none mt-[10px] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white w-full rounded-[6px]"
             placeholder="Your Email Address*"
             name="from_email"
           />
           <textarea
             cols="50"
             type="text"
-            className="text-[#132238] mt-[10px] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white rounded-[6px]"
+            className="text-[#132238] outline-none mt-[10px] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white rounded-[6px]"
             placeholder="What you want to say*"
             name="message"
           />
-          <input
-            className="bg-gradient-to-r cursor-pointer from-[#75B4F1] to-[#A573F0] hover:border hover:border-[#4285F4]  rounded-[6px] text-white mt-[10px] py-1 font-normal leading-8 font-raleway text-[16px]"
+          <motion.input
+            className="bg-gradient-to-r cursor-pointer from-[#75B4F1] to-[#A573F0] hover:border hover:border-[#4285F4]  rounded-[6px] text-white mt-[10px] py-1 font-normal leading-8 font-raleway text-[16px] outline-none"
             type="submit"
             value="Send"
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.1 },
+            }}
+            whileTap={{ scale: 0.9 }}
           />
         </form>
         <Toaster />
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { IconButton, MobileNav, Navbar } from "@material-tailwind/react";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiBars2 } from "react-icons/hi2";
@@ -10,7 +11,13 @@ const StickyNavbar = () => {
   const [openNav, setOpenNav] = useState(false);
   const navList = (
     <ul className="font-raleway font-semibold text-lg mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center text-[#222A35]">
-      <li>
+      <motion.li
+        whileHover={{
+          scale: 1.09,
+          transition: { duration: 0.1 },
+        }}
+        whileTap={{ scale: 0.9 }}
+      >
         <Link
           to="about"
           spy={true}
@@ -21,8 +28,14 @@ const StickyNavbar = () => {
         >
           About
         </Link>
-      </li>
-      <li>
+      </motion.li>
+      <motion.li
+        whileHover={{
+          scale: 1.09,
+          transition: { duration: 0.1 },
+        }}
+        whileTap={{ scale: 0.9 }}
+      >
         <Link
           to="skills"
           spy={true}
@@ -33,8 +46,14 @@ const StickyNavbar = () => {
         >
           Skills
         </Link>
-      </li>
-      <li>
+      </motion.li>
+      <motion.li
+        whileHover={{
+          scale: 1.09,
+          transition: { duration: 0.1 },
+        }}
+        whileTap={{ scale: 0.9 }}
+      >
         <Link
           to="projects"
           spy={true}
@@ -45,9 +64,15 @@ const StickyNavbar = () => {
         >
           Work
         </Link>
-      </li>
+      </motion.li>
 
-      <li>
+      <motion.li
+        whileHover={{
+          scale: 1.09,
+          transition: { duration: 0.1 },
+        }}
+        whileTap={{ scale: 0.9 }}
+      >
         <Link
           to="contact"
           spy={true}
@@ -58,7 +83,7 @@ const StickyNavbar = () => {
         >
           Contact
         </Link>
-      </li>
+      </motion.li>
     </ul>
   );
 
@@ -71,23 +96,41 @@ const StickyNavbar = () => {
       <li className="hidden md:block"></li>
       <li className="hidden md:block"></li>
 
-      <li>
+      <motion.li
+        whileHover={{
+          scale: 1.09,
+          transition: { duration: 0.1 },
+        }}
+        whileTap={{ scale: 0.9 }}
+      >
         <a href="https://www.linkedin.com/in/mahdi-mortuza">
           <FaLinkedinIn className="w-6 h-5 text-[#222A35]" />
         </a>
-      </li>
+      </motion.li>
 
-      <li>
+      <motion.li
+        whileHover={{
+          scale: 1.09,
+          transition: { duration: 0.1 },
+        }}
+        whileTap={{ scale: 0.9 }}
+      >
         <a href="https://github.com/mahdimortuza">
           <FaGithub className="w-6 h-5 text-[#222A35]" />
         </a>
-      </li>
+      </motion.li>
 
-      <li>
+      <motion.li
+        whileHover={{
+          scale: 1.09,
+          transition: { duration: 0.1 },
+        }}
+        whileTap={{ scale: 0.9 }}
+      >
         <a href="">
           <RiTwitterXLine className="w-6 h-5 text-[#222A35]" />
         </a>
-      </li>
+      </motion.li>
     </ul>
   );
 
@@ -96,9 +139,16 @@ const StickyNavbar = () => {
       <div className="flex items-center justify-between text-black max-w-[1350px] mx-auto">
         <div className="mr-4 hidden lg:block">{navList}</div>
 
-        <a href="/">
+        <motion.a
+          href="/"
+          whileHover={{
+            scale: 1.09,
+            transition: { duration: 0.1 },
+          }}
+          whileTap={{ scale: 0.9 }}
+        >
           <img src={logo}></img>
-        </a>
+        </motion.a>
 
         <div className="flex  items-center gap-4">
           <div className="hidden md:block">{social}</div>

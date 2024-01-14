@@ -93,7 +93,14 @@ const Footer = () => {
   );
   return (
     <div className="pb-10 flex flex-col items-center mt-[60px] md:mt-[120px]">
-      <a href="/">
+      <motion.a
+        href="/"
+        whileHover={{
+          scale: 1.09,
+          transition: { duration: 0.1 },
+        }}
+        whileTap={{ scale: 0.9 }}
+      >
         <motion.img
           className="w-12 md:w-16 h-9 md:h-12"
           src={logo}
@@ -101,7 +108,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, marginBottom: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         ></motion.img>
-      </a>
+      </motion.a>
       <motion.div
         className="mt-8"
         initial={{ opacity: 0, marginBottom: 15 }}

@@ -5,6 +5,7 @@ import bgObject from "../assets/bg-objects/obj-1.svg";
 import fgObj1 from "../assets/fg-objects/fg-1.png";
 import fgObj2 from "../assets/fg-objects/fg-2.png";
 import img from "../assets/image/mahdi.png";
+import resume from "../assets/resume/Mahdi_Mortuza_Resume.pdf";
 
 const Hero = () => {
   return (
@@ -60,7 +61,9 @@ const Hero = () => {
               }}
               whileTap={{ scale: 0.9 }}
             >
-              My Resume
+              <a href={resume} download={resume}>
+                My Resume
+              </a>
             </motion.button>
           </motion.div>
         </div>
@@ -82,6 +85,7 @@ const Hero = () => {
           />
         </div>
       </div>
+
       <Link
         to="skills"
         spy={true}

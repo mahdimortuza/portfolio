@@ -22,6 +22,7 @@ const ProjectIdeaCTA = () => {
         >
           Have a project idea? <br /> Discuss now!
         </motion.h1>
+
         <motion.button
           className="absolute -bottom-5 md:bottom-[68px] text-[18px] md:text-[20px] text-white leading-[24px] font-bold bg-gradient-to-r from-[#75B4F1] to-[#A573F0]  rounded-[4px] px-[16px] py-[8px]"
           whileHover={{
@@ -30,8 +31,9 @@ const ProjectIdeaCTA = () => {
           }}
           whileTap={{ scale: 0.9 }}
         >
-          Let’s Talk
+          <a href=" https://www.linkedin.com/in/mahdi-mortuza/">Let’s Talk</a>
         </motion.button>
+
         <img
           className="absolute -bottom-10 md:bottom-10 left-[30px] md:left-[300px] w-[40px] md:w-[72px] h-[40px] md:h-[69px] "
           src={obj2}

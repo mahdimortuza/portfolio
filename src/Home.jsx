@@ -1,3 +1,4 @@
+import { Toaster } from 'sonner';
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -9,6 +10,7 @@ import Technologies from "./components/Technologies";
 const Home = () => {
   return (
     <div>
+      <Toaster />
       <StickyNavbar />
       <Hero />
       <Technologies />

@@ -1,36 +1,71 @@
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+
 import { useRef } from "react";
-import { Toaster } from "react-hot-toast";
+import { toast } from "sonner";
 const Contact = () => {
+
   const form = useRef();
 
-  const successMessage = "Message sent successfully 😊";
-  const failMessage = "Failed to send message 😞";
+  const {
+    register,
+    handleSubmit,reset, 
+    formState: { errors },
+  } = useForm()
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
+  
+  const onSubmit = (data) => {
     emailjs
-      .sendForm(
-        "service_loy0dzi",
-        "template_lqzb5bt",
-        form.current,
-        "sJWJP6mnHBszRsI9Q"
-      )
-      .then(
-        (result) => {
-          if (result) {
-            window.alert(successMessage);
-          }
-        },
-        (error) => {
-          if (error) {
-            window.alert(failMessage);
-          }
+    .sendForm(
+      "service_loy0dzi",
+      "template_lqzb5bt",
+      form.current,
+      "sJWJP6mnHBszRsI9Q"
+    )
+    .then(
+      (result) => {
+        if (result) {
+          toast.success("Message sent successfully!")
         }
-      );
-  };
+      },
+      (error) => {
+        if (error) {
+          toast.error("please try again!")
+        }
+      }
+    );
+    
+    console.log(data)
+    reset()
+  }
+
+  // const successMessage = "Message sent successfully 😊";
+  // const failMessage = "Failed to send message 😞";
+
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_loy0dzi",
+  //       "template_lqzb5bt",
+  //       form.current,
+  //       "sJWJP6mnHBszRsI9Q"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         if (result) {
+  //           window.alert(successMessage);
+  //         }
+  //       },
+  //       (error) => {
+  //         if (error) {
+  //           window.alert(failMessage);
+  //         }
+  //       }
+  //     );
+  // };
 
   return (
     <div
@@ -69,28 +104,38 @@ const Contact = () => {
       >
         <form
           ref={form}
-          onSubmit={sendEmail}
+          onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col w-[350px]  md:w-[448px]  p-5 bg-[#EEEAE5] rounded-[8px] mt-[50px] md:mt-[0px]"
         >
           <input
             type="text"
             className="text-[#132238] outline-none font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white w-full rounded-[6px]"
             placeholder="Your Name*"
-            name="from_name"
-          />
+            name="name"
+            {...register('name' , { required: true })}
+          /> 
+          {errors.name && <span className="text-red-500 text-sm font-thin">Name field is required*</span>}
           <input
             type="email"
             className="text-[#132238] outline-none mt-[10px] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white w-full rounded-[6px]"
             placeholder="Your Email Address*"
-            name="from_email"
+            name="email"
+            {...register('email', { required: true })}
+
           />
+          {errors.email && <span className="text-red-500 text-sm font-thin">Email field is required*</span>}
+
           <textarea
             cols="50"
             type="text"
             className="text-[#132238] outline-none mt-[10px] font-normal leading-8 font-raleway text-[16px] px-4 py-1 bg-white rounded-[6px]"
             placeholder="What you want to say*"
             name="message"
+            {...register('message', { required: true })}
+
           />
+          {errors.message && <span className="text-red-500 text-sm font-thin">Please write your message*</span>}
+
           <motion.input
             className="bg-gradient-to-r cursor-pointer from-[#75B4F1] to-[#A573F0] hover:border hover:border-[#4285F4]  rounded-[6px] text-white mt-[10px] py-1 font-normal leading-8 font-raleway text-[16px] outline-none"
             type="submit"
@@ -101,8 +146,7 @@ const Contact = () => {
             }}
             whileTap={{ scale: 0.9 }}
           />
-        </form>
-        <Toaster />
+        </form> 
       </motion.div>
     </div>
   );

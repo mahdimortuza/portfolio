@@ -135,7 +135,7 @@ const StickyNavbar = () => {
   );
 
   return (
-    <Navbar className="sticky top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-[#fffed0]">
+    <Navbar className="sticky top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-[#FEFAF6]">
       <div className="flex items-center justify-between text-black max-w-[1350px] mx-auto">
         <div className="mr-4 hidden lg:block">{navList}</div>
 

@@ -40,37 +40,11 @@ const Contact = () => {
     reset()
   }
 
-  // const successMessage = "Message sent successfully 😊";
-  // const failMessage = "Failed to send message 😞";
-
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-
-  //   emailjs
-  //     .sendForm(
-  //       "service_loy0dzi",
-  //       "template_lqzb5bt",
-  //       form.current,
-  //       "sJWJP6mnHBszRsI9Q"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         if (result) {
-  //           window.alert(successMessage);
-  //         }
-  //       },
-  //       (error) => {
-  //         if (error) {
-  //           window.alert(failMessage);
-  //         }
-  //       }
-  //     );
-  // };
 
   return (
     <div
       name="contact"
-      className="bg-[#fffed0] max-w-[1350px] mx-auto flex flex-col md:flex-row md:justify-between items-center md:px-48 pt-[50px] md:pt-[68px] px-4"
+      className="bg-[#FEFAF6] max-w-[1350px] mx-auto flex flex-col md:flex-row md:justify-between items-center md:px-48 pt-[50px] md:pt-[68px] px-4"
     >
       <motion.div
         initial={{ opacity: 0, marginLeft: -15 }}

@@ -104,7 +104,18 @@ const Projects = () => {
                       }}
                       whileTap={{ scale: 0.9 }}
                     >
-                      Source Code
+                      Client Code
+                    </motion.a>
+                    <motion.a
+                      className=" border-[2px] border-[#4285F4] px-[6px] py-[3px] md:px-[10px] md:py-[5px] hover:bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:text-white rounded-[4px]"
+                      href="/"
+                      whileHover={{
+                        scale: 1.05,
+                        transition: { duration: 0.1 },
+                      }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      Server Code
                     </motion.a>
                     <motion.a
                       className=" border-[2px] border-[#4285F4] px-[6px] py-[3px] md:px-[10px] md:py-[5px] hover:bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:text-white rounded-[4px]"

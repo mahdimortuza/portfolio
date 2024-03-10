@@ -7,26 +7,35 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import objBlue from "../assets/bg-objects/obj-blue.svg";
 import sliderObj from "../assets/bg-objects/sliderObj.svg";
-import console from "../assets/projects/1.png";
-import uniaid from "../assets/projects/2.png";
-import coco from "../assets/projects/3.png";
+import event_360 from "../assets/projects/Event 360.webp";
+import foodieBee from "../assets/projects/Foodie Bee.webp";
+import uniAid from "../assets/projects/Uniaid.webp";
 
 const Projects = () => {
   const sliderElements = [
     {
-      header: "UniAid",
+      header: "Event-360",
       des: "Event-based crowdfunding website.",
-      img: console,
+      img: event_360,
+      clientRepo: "https://github.com/mahdimortuza/event-360-client",
+      serverRepo: "https://github.com/mahdimortuza/event-360-server",
+      liveLink: "https://event-360-client.vercel.app/",
+    },
+    {
+      header: "Foodie Bee",
+      des: "Event-based crowdfunding website.",
+      img: foodieBee,
+      clientRepo: "https://github.com/mahdimortuza/foodie-bee-client",
+      serverRepo: "https://github.com/mahdimortuza/foodie-bee-server",
+      liveLink: "https://foodie-bee-client-main.vercel.app/",
     },
     {
       header: "UniAid",
       des: "Event-based crowdfunding website.",
-      img: uniaid,
-    },
-    {
-      header: "UniAid",
-      des: "Event-based crowdfunding website.",
-      img: coco,
+      img: uniAid,
+      clientRepo: "https://github.com/Eshtiaque/Crowd-Funding-Client",
+      serverRepo: "https://github.com/Eshtiaque/Crowd-Funding-Server",
+      liveLink: "https://crowd-funding-dc81b.web.app/",
     },
   ];
 
@@ -71,7 +80,8 @@ const Projects = () => {
         modules={[EffectCoverflow, Pagination]}
         className="swiper_container mt-10"
       >
-        {sliderElements.map((sliderElement) => (
+        {
+        sliderElements.map((sliderElement) => (
           <div className="relative" key={sliderElement.header}>
             <SwiperSlide>
               <div className="">
@@ -89,15 +99,10 @@ const Projects = () => {
 
                   {/* button  */}
                   <div className="text-[#4285F4] flex gap-[5px] md:gap-[14px] font-raleway text-[14px] md:text-[17px] font-semibold mt-2">
-                    {/* <a
-                      className=" border-[2px] border-[#4285F4] px-[6px] py-[3px] md:px-[10px] md:py-[5px] hover:bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:text-white rounded-[4px]"
-                      href="/"
-                    >
-                      Technologies
-                    </a> */}
+                    
                     <motion.a
                       className=" border-[2px] border-[#4285F4] px-[6px] py-[3px] md:px-[10px] md:py-[5px] hover:bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:text-white rounded-[4px]"
-                      href="/"
+                      href={sliderElement.clientRepo}
                       whileHover={{
                         scale: 1.05,
                         transition: { duration: 0.1 },
@@ -108,7 +113,7 @@ const Projects = () => {
                     </motion.a>
                     <motion.a
                       className=" border-[2px] border-[#4285F4] px-[6px] py-[3px] md:px-[10px] md:py-[5px] hover:bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:text-white rounded-[4px]"
-                      href="/"
+                      href={sliderElement.serverRepo}
                       whileHover={{
                         scale: 1.05,
                         transition: { duration: 0.1 },
@@ -119,7 +124,7 @@ const Projects = () => {
                     </motion.a>
                     <motion.a
                       className=" border-[2px] border-[#4285F4] px-[6px] py-[3px] md:px-[10px] md:py-[5px] hover:bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:text-white rounded-[4px]"
-                      href="/"
+                      href={sliderElement.liveLink}
                       whileHover={{
                         scale: 1.05,
                         transition: { duration: 0.1 },
@@ -133,10 +138,9 @@ const Projects = () => {
               </div>
             </SwiperSlide>
           </div>
-        ))}
-        {/* <div>
-          
-        </div> */}
+        ))
+        }
+        
       </Swiper>
 
       <div className="slider-controler">

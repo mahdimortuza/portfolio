@@ -50,9 +50,9 @@ const Projects = () => {
       />
       <motion.h2
         className="font-playfair text-[38px] md:text-[64px] text-left md:text-center leading-[40px] md:leading-[66px] mt-[100px]"
-        initial={{ opacity: 0, marginBottom: -15 }}
-        whileInView={{ opacity: 1, marginBottom: 0 }}
-        transition={{ delay: 1, duration: 1 }}
+        // initial={{ opacity: 0, marginBottom: -15 }}
+        // whileInView={{ opacity: 1, marginBottom: 0 }}
+        // transition={{ delay: 1, duration: 1 }}
       >
         Some of my recent <br /> projects
       </motion.h2>

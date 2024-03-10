@@ -11,8 +11,8 @@ const Footer = () => {
   const navList = (
     <motion.ul
       className="font-raleway font-semibold text-lg flex gap-5 md:gap-14 text-[#222A35] "
-      initial={{ opacity: 0, marginBottom: 15 }}
-      whileInView={{ opacity: 1, marginBottom: 0 }}
+      initial={{ opacity: 0, marginLeft: 30 }}
+      whileInView={{ opacity: 1, marginLeft: 0 }}
       transition={{ delay: 0.5, duration: 1 }}
     >
       <li>
@@ -104,26 +104,22 @@ const Footer = () => {
         <motion.img
           className="w-12 md:w-16 h-9 md:h-12"
           src={logo}
-          initial={{ opacity: 0, marginBottom: 15 }}
-          whileInView={{ opacity: 1, marginBottom: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         ></motion.img>
       </motion.a>
       <motion.div
         className="mt-8"
-        initial={{ opacity: 0, marginBottom: 15 }}
-        whileInView={{ opacity: 1, marginBottom: 0 }}
+        initial={{ opacity: 0, marginLeft: 100 }}
+        whileInView={{ opacity: 1, marginLeft: 0 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
         {navList}
       </motion.div>
       <motion.div
-        className="mx-auto mt-8"
-        initial={{ opacity: 0, marginBottom: 15 }}
-        whileInView={{ opacity: 1, marginBottom: 0 }}
-        transition={{ delay: 0.5, duration: 0.8 }}
-      >
-        {" "}
+        className="mx-auto mt-8" 
+      > 
         {social}
       </motion.div>
 

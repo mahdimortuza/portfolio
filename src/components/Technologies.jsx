@@ -21,8 +21,8 @@ const Technologies = () => {
       <div className=" flex flex-col md:flex-row md:items-center md:justify-center gap-3 md:gap-8 ">
         <motion.h1
           className="font-playfair text-[38px] md:text-[64px] text-left md:text-right leading-[40px] md:leading-[66px]"
-          initial={{ opacity: 0, marginBottom: -15 }}
-          whileInView={{ opacity: 1, marginBottom: 0 }}
+          initial={{ opacity: 0, marginLeft: -100 }}
+          whileInView={{ opacity: 1, marginLeft: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
           What <br /> Technologies <br /> I use
@@ -35,8 +35,8 @@ const Technologies = () => {
         ></motion.div>
         <motion.p
           className="w-full md:w-[612px] font-raleway text-[20px] md:text-[32px] font-medium leading-[24px] md:leading-[40px]"
-          initial={{ opacity: 0, marginBottom: -15 }}
-          whileInView={{ opacity: 1, marginBottom: 0 }}
+          initial={{ opacity: 0, marginRight: -100 }}
+          whileInView={{ opacity: 1, marginRight: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
           I assure stability, security, and a unique UX with tailored front-end

@@ -8,6 +8,22 @@ import img from "../assets/image/mahdi.png";
 import resume from "../assets/resume/Mahdi_Mortuza_Resume.pdf";
 
 const Hero = () => {
+
+  const laptop = { 
+    animate: { 
+      scale: 1,
+      y: 15,
+      transition: {
+        duration: .5,
+        y: {
+          duration: 1,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        },
+      },
+    },
+  };
   return (
     <div
       name="about"
@@ -21,7 +37,7 @@ const Hero = () => {
             className="font-playfair text-[rgb(19,34,56)] text-[48px] md:text-[64px] font-bold leading-[50px] md:leading-[64px]"
             initial={{ opacity: 0, marginBottom: -15 }}
             whileInView={{ opacity: 1, marginBottom: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ dpuration: 1 }}
           >
             Hi 👋 <br />
             I’m Mahdi Mortuza
@@ -86,15 +102,23 @@ const Hero = () => {
         </div>
       </div>
 
-      <Link
+ <Link
         to="skills"
         spy={true}
         smooth={true}
         offset={0}
         duration={1000}
-        className="cursor-pointer"
+        className="cursor-pointer" 
+      >     
+      <motion.div
+      className=""
+      variants={laptop}
+      animate="animate"
       >
+      
         <FaChevronDown className="text-[#132238] mt-[20px] mx-auto text-[30px]" />
+      
+      </motion.div>
       </Link>
     </div>
   );

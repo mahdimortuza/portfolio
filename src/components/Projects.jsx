@@ -10,6 +10,8 @@ import sliderObj from "../assets/bg-objects/sliderObj.svg";
 import event_360 from "../assets/projects/Event 360.webp";
 import foodieBee from "../assets/projects/Foodie Bee.webp";
 import uniAid from "../assets/projects/Uniaid.webp";
+import oceanCatch from "../assets/projects/ocean-catch.webp";
+import sweetHome from "../assets/projects/sweet-home.webp";
 
 const Projects = () => {
   const sliderElements = [
@@ -23,11 +25,25 @@ const Projects = () => {
     },
     {
       header: "Foodie Bee",
-      des: "Event-based crowdfunding website.",
+      des: "Supply chain management website.",
       img: foodieBee,
       clientRepo: "https://github.com/mahdimortuza/foodie-bee-client",
       serverRepo: "https://github.com/mahdimortuza/foodie-bee-server",
       liveLink: "https://foodie-bee-client-main.vercel.app/",
+    },{
+      header: "Sweet Home",
+      des: "Real estate property management website.",
+      img: sweetHome,
+      clientRepo: "https://github.com/mahdimortuza/sweet-home-client",
+      serverRepo: "https://github.com/mahdimortuza/sweet-home-server",
+      liveLink: "https://sweet-home-client.vercel.app/",
+    },{
+      header: "Ocean Catch",
+      des: "Seafood e-commerce website.",
+      img: oceanCatch,
+      clientRepo: "https://github.com/mahdimortuza/ocean-catch-client",
+      serverRepo: "https://github.com/mahdimortuza/ocean-catch-server",
+      liveLink: "https://ocean-catch-client.vercel.app/",
     },
     {
       header: "UniAid",

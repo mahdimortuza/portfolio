@@ -85,7 +85,7 @@ const Footer = () => {
       </li>
 
       <li>
-        <a href="">
+        <a href="https://twitter.com/mahdi_mortuza">
           <RiTwitterXLine className="w-6 h-5 text-[#222A35]" />
         </a>
       </li>

@@ -1,4 +1,5 @@
 import { Toaster } from 'sonner';
+import Blogs from './components/Blogs';
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -17,6 +18,7 @@ const Home = () => {
       <Projects />
       <ProjectIdeaCTA />
       <Contact />
+      <Blogs />
       <Footer />
     </div>
   );

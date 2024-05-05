@@ -84,6 +84,25 @@ const StickyNavbar = () => {
           Contact
         </Link>
       </motion.li>
+
+      <motion.li
+        whileHover={{
+          scale: 1.09,
+          transition: { duration: 0.1 },
+        }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <Link
+          to="/blogs"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={1000}
+          className="px-3 py-2 cursor-pointer"
+        >
+          Blogs
+        </Link>
+      </motion.li>
     </ul>
   );
 

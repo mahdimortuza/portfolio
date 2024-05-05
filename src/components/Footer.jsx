@@ -35,7 +35,6 @@ const Footer = () => {
           offset={0}
           duration={1000}
           className="px-3 py-2 cursor-pointer"
-          href="#"
         >
           Skills
         </Link>
@@ -48,7 +47,6 @@ const Footer = () => {
           offset={-60}
           duration={1000}
           className="px-3 py-2 cursor-pointer"
-          href="#"
         >
           Work
         </Link>
@@ -62,9 +60,23 @@ const Footer = () => {
           offset={-100}
           duration={1000}
           className="px-3 py-2 cursor-pointer"
-          href="#"
         >
           Contact
+        </Link>
+      </li>
+
+
+      <li>
+        <Link
+          to="blogs"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={1000}
+          className="px-3 py-2 cursor-pointer"
+          href="/blogs"
+        >
+          Blogs
         </Link>
       </li>
     </motion.ul>

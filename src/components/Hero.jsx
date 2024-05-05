@@ -49,7 +49,7 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 1 }}
           >
             A full-stack web developer. I solve web problems by crafting
-            scalable products using MERN stack technology.
+            scalable products using NextJS and MERN stack technology.
           </motion.p>
           <motion.div
             className="flex justify-center md:justify-start mt-[26px] md:mt-[60px] font-raleway leading-[40px] text-[18px] md:text-xl font-bold gap-7"
@@ -57,6 +57,7 @@ const Hero = () => {
             whileInView={{ opacity: 1, marginLeft: 0 }}
             transition={{ delay: 1, duration: 0.5 }}
           >
+            <Link to="contact">
             <motion.button
               className="px-[14px] md:px-5 py-2 md:py-[10px] bg-gradient-to-r from-[#75B4F1] to-[#A573F0] 
              rounded-[4px] text-white"
@@ -68,7 +69,7 @@ const Hero = () => {
             >
               Let’s Talk
             </motion.button>
-
+</Link>
             <motion.button
               className="px-[14px] md:px-5 py-2 md:py-[10px] text-[#4285F4] border-2  border-[#4285F4] hover:bg-gradient-to-r from-[#75B4F1] to-[#A573F0] hover:text-white rounded-[4px]"
               whileHover={{

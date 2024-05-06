@@ -1,12 +1,9 @@
 # This is my portfolio website
 
-- checkout the link: https://mahdi-mortuza-portfolio.netlify.app/
+- checkout the live link: https://mahdi-mortuza-portfolio.netlify.app/
 
-This is will be a well documented.
+##### About the project
 
-all done
+- this website is built using
 
-how to learn server management
-aws cloud training
-digital ocean
-linode
+* react, react-router-dom, tailwind, material-tailwind, framer-motion, react-hook-form, sonner and swiperjs

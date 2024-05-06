@@ -5,7 +5,8 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiBars2 } from "react-icons/hi2";
 import { RiTwitterXLine } from "react-icons/ri";
 import { Link } from "react-scroll";
-import logo from "../assets/logo/logo.svg";
+import logo from "../../../assets/logo/logo.svg";
+
 
 const StickyNavbar = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -93,8 +94,7 @@ const StickyNavbar = () => {
         whileTap={{ scale: 0.9 }}
       >
         <Link
-          to="/blogs"
-          spy={true}
+          to="/blogs" 
           smooth={true}
           offset={-100}
           duration={1000}

@@ -5,13 +5,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import objBlue from "../assets/bg-objects/obj-blue.svg";
-import sliderObj from "../assets/bg-objects/sliderObj.svg";
-import event_360 from "../assets/projects/Event 360.webp";
-import foodieBee from "../assets/projects/Foodie Bee.webp";
-import uniAid from "../assets/projects/Uniaid.webp";
-import oceanCatch from "../assets/projects/ocean-catch.webp";
-import sweetHome from "../assets/projects/sweet-home.webp";
+import objBlue from "../../../assets/bg-objects/obj-blue.svg";
+import sliderObj from "../../../assets/bg-objects/sliderObj.svg";
+import event_360 from "../../../assets/projects/Event 360.webp";
+import foodieBee from "../../../assets/projects/Foodie Bee.webp";
+import uniAid from "../../../assets/projects/Uniaid.webp";
+import oceanCatch from "../../../assets/projects/ocean-catch.webp";
+import sweetHome from "../../../assets/projects/sweet-home.webp";
 
 const Projects = () => {
   const sliderElements = [

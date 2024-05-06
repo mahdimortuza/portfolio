@@ -1,14 +1,17 @@
 import { ThemeProvider } from "@material-tailwind/react";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Home from "./Home.jsx";
+import {
+  RouterProvider
+} from "react-router-dom";
 import "./index.css";
+import router from "./routes";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
       <div className=" bg-[#FEFAF6]">
-        <Home />
+      <RouterProvider router={router} />
       </div>
     </ThemeProvider>
   </React.StrictMode>

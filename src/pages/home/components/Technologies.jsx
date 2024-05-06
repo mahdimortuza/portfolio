@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import css from "../assets/logos/css.svg";
-import express from "../assets/logos/express.svg";
-import firebase from "../assets/logos/firebase.svg";
-import html from "../assets/logos/html.svg";
-import js from "../assets/logos/js.svg";
-import mongodb from "../assets/logos/mongodb.svg";
-import mongoose from "../assets/logos/mongoose.svg";
-import node from "../assets/logos/node.svg";
-import react from "../assets/logos/react.svg";
-import redux from "../assets/logos/redux.svg";
-import tailwind from "../assets/logos/tailwind.svg";
-import ts from "../assets/logos/ts.svg";
+import css from "../../../assets/logos/css.svg";
+import express from "../../../assets/logos/express.svg";
+import firebase from "../../../assets/logos/firebase.svg";
+import html from "../../../assets/logos/html.svg";
+import js from "../../../assets/logos/js.svg";
+import mongodb from "../../../assets/logos/mongodb.svg";
+import mongoose from "../../../assets/logos/mongoose.svg";
+import node from "../../../assets/logos/node.svg";
+import react from "../../../assets/logos/react.svg";
+import redux from "../../../assets/logos/redux.svg";
+import tailwind from "../../../assets/logos/tailwind.svg";
+import ts from "../../../assets/logos/ts.svg";
 
 const Technologies = () => {
   return (

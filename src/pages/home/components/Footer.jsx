@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 import { Link } from "react-scroll";
-import logo from "../assets/logo/logo.svg";
-
+import logo from "../../../assets/logo/logo.svg";
 const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
@@ -68,7 +67,7 @@ const Footer = () => {
 
       <li>
         <Link
-          to="blogs"
+          to="/blogs"
           spy={true}
           smooth={true}
           offset={-100}

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import titleBg from "../assets/bg-objects/section-title-bg.svg";
-import obj2 from "../assets/fg-objects/fg-1.png";
-import obj1 from "../assets/fg-objects/fg-2.png";
+import titleBg from "../../../assets/bg-objects/section-title-bg.svg";
+import obj2 from "../../../assets/fg-objects/fg-1.png";
+import obj1 from "../../../assets/fg-objects/fg-2.png";
 
 const ProjectIdeaCTA = () => {
   return (

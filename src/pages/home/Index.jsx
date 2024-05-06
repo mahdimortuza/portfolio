@@ -8,7 +8,7 @@ import ProjectIdeaCTA from "./components/ProjectIdeaCTA";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 
-const Home = () => {
+const App = () => {
   return (
     <div>
       <Toaster />
@@ -24,4 +24,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default App;

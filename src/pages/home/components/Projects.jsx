@@ -12,6 +12,7 @@ import foodieBee from "../../../assets/projects/Foodie Bee.webp";
 import uniAid from "../../../assets/projects/Uniaid.webp";
 import oceanCatch from "../../../assets/projects/ocean-catch.webp";
 import sweetHome from "../../../assets/projects/sweet-home.webp";
+import '../../../common.css';
 
 const Projects = () => {
   const sliderElements = [
@@ -100,7 +101,7 @@ const Projects = () => {
         sliderElements.map((sliderElement) => (
           <div className="relative" key={sliderElement.header}>
             <SwiperSlide>
-              <div className="">
+              <div className=" ">
                 <img
                   className="h-[300px] md:h-[330px] w-full"
                   src={sliderElement.img}
